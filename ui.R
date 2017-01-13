@@ -19,6 +19,10 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       helpText("Time for some Association Rules Mining!"),br(),
+      selectInput("TypeOfData",
+                  label = "Data To be Mined: ",
+                  choices = c("Food", "Flavor", "Type of Food"),
+                  selected = "Food"),
       sliderInput(inputId="conf_value", 
                   label="Confidence:", 
                   min=0.7, max=0.99, value=0.8, step=1/100000),br(),
